@@ -10,7 +10,9 @@ pub enum Error {
     Encoding,
 
     MoleculeVerification,
-
+    IntentDataMissing,
+    InvalidTypeIDCellNum, // There can only be at most one input and at most one output type ID cell
+    TypeIDNotMatch,       // Type id does not match args
     IntentDataUnmatched,
     CheckFailed,
 }
