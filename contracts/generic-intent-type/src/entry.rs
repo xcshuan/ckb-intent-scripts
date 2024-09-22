@@ -18,11 +18,10 @@ use crate::{
 
 pub fn main() -> Result<(), Error> {
     let script = load_script()?;
-    if script.args().raw_data().len() < 64 {
+    let args = script.args().raw_data();
+    if args.len() < 64 {
         return Err(Error::Encoding);
     }
-
-    let args = script.args().raw_data();
 
     let receiver_script_hash = &args[0..32];
     let intent_data_hash = &args[32..64];

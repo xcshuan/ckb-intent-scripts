@@ -4,7 +4,7 @@ use ckb_std::{
     ckb_constants::Source,
     debug,
     error::SysError,
-    high_level::{load_cell_type_hash, load_input, load_script, load_script_hash},
+    high_level::{load_cell_type_hash, load_input, load_script_hash},
     syscalls::load_cell,
 };
 use molecule::prelude::Entity;
